@@ -1,7 +1,8 @@
-package com.androidavanzado.prueba;
+package com.androidavanzado.prueba.ui;
 
 import android.os.Bundle;
 
+import com.androidavanzado.prueba.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.androidavanzado.prueba.databinding.ActivityNotasBinding;
 
-public class NotasActivity extends AppCompatActivity implements NotasInteractionListener {
+public class DashboardActivity extends AppCompatActivity {
 
     private ActivityNotasBinding binding;
 
@@ -34,19 +35,4 @@ public class NotasActivity extends AppCompatActivity implements NotasInteraction
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
-
-    @Override
-    public void editNotaClick(Nota nota) {
-
-    }
-
-    @Override
-    public void eliminarNotaClick(Nota nota) {
-
-    }
-
-    @Override
-    public void favoritaNotaClick(Nota nota) {
-
-    }
 }

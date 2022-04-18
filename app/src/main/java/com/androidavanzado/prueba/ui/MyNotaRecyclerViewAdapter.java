@@ -1,23 +1,27 @@
-package com.androidavanzado.prueba;
+package com.androidavanzado.prueba.ui;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidavanzado.prueba.db.entity.NotaEntity;
+import com.androidavanzado.prueba.R;
+
 import java.util.List;
 
 public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecyclerViewAdapter.ViewHolder> {
 
-    private final List<Nota> mValues;
-    private NotasInteractionListener mlistener;
+    private List<NotaEntity> mValues;
+    private final Context mctx;
 
-    public MyNotaRecyclerViewAdapter(List<Nota> items, NotasInteractionListener listener) {
+    public MyNotaRecyclerViewAdapter(List<NotaEntity> items, Context ctx) {
         mValues = items;
-        mlistener = listener;
+        mctx = ctx;
     }
 
     @Override
@@ -27,6 +31,11 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
                         .inflate(R.layout.fragment_nota, parent, false);
         return new ViewHolder(view);
 
+    }
+
+    public void setNuevasNotas(List<NotaEntity> nuevasNotas) {
+        this.mValues = nuevasNotas;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -39,9 +48,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         }
 
         holder.imageViewFavorita.setOnClickListener((v) -> {
-           if(null != mlistener){
-               mlistener.favoritaNotaClick(holder.mItem);
-           }
+
         });
     }
 
@@ -55,7 +62,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         public final TextView textViewTitulo;
         public final TextView textViewContenido;
         public final ImageView imageViewFavorita;
-        public Nota mItem;
+        public NotaEntity mItem;
 
         public ViewHolder(View view) {
             super(view);

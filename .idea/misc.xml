@@ -11,7 +11,9 @@
         <entry key="..\:/Proyectos/Curso/Android/CL01ConstraintLayout/app/src/main/res/layout/fragment_nota.xml" value="0.4954710144927536" />
         <entry key="..\:/Proyectos/Curso/Android/CL01ConstraintLayout/app/src/main/res/layout/fragment_nota_list.xml" value="0.4954710144927536" />
         <entry key="..\:/Proyectos/Curso/Android/CL01ConstraintLayout/app/src/main/res/layout/fragment_notifications.xml" value="0.4954710144927536" />
+        <entry key="..\:/Proyectos/Curso/Android/CL01ConstraintLayout/app/src/main/res/layout/nueva_nota_dialog_fragment.xml" value="0.55" />
         <entry key="..\:/Proyectos/Curso/Android/CL01ConstraintLayout/app/src/main/res/menu/bottom_nav_menu.xml" value="0.42592592592592593" />
+        <entry key="..\:/Proyectos/Curso/Android/CL01ConstraintLayout/app/src/main/res/menu/options_menu_nota_fragment.xml" value="0.55" />
       </map>
     </option>
   </component>

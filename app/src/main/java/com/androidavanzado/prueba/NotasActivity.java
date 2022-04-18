@@ -12,7 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.androidavanzado.prueba.databinding.ActivityNotasBinding;
 
-public class NotasActivity extends AppCompatActivity {
+public class NotasActivity extends AppCompatActivity implements NotasInteractionListener {
 
     private ActivityNotasBinding binding;
 
@@ -34,4 +34,19 @@ public class NotasActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+
+    @Override
+    public void editNotaClick(Nota nota) {
+
+    }
+
+    @Override
+    public void eliminarNotaClick(Nota nota) {
+
+    }
+
+    @Override
+    public void favoritaNotaClick(Nota nota) {
+
+    }
 }
